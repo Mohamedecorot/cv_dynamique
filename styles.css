@@ -225,7 +225,7 @@ header .button:hover a {
 }
 
 .timeline:nth-child(1):after {
-    content: '△';
+    content: '▲';
     color: #ff4e50;
     position: absolute;
     top: -10px;

@@ -49,3 +49,6 @@ $(window).scroll(function() {
         compteur = 1;
     }
 });
+
+// AOS (pour les effets d'apparations des éléments: https://michalsnik.github.io/aos/)
+AOS.init();
