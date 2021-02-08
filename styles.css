@@ -96,7 +96,7 @@ header .button:hover a {
 /* ********************** LANGAGES *********************** */
 #langages {
   padding: 80px 80px 80px 50px;
-  margin: 20px 0 0 6%;
+  margin: 90px 0 0 6%;
   height: 620px;
   width: 47%;
   max-width: 640px;
@@ -165,6 +165,8 @@ header .button:hover a {
 #parcours h3 {
   font-size: 2.5em;
   padding-bottom: 30px;
+  text-shadow: -1px -1px 1px #000000;
+  color: white;
 }
 #parcours h4 {
   font-size: 1.6em;
@@ -178,6 +180,8 @@ header .button:hover a {
 }
 #parcours p {
   line-height: 1.9em;
+  font-size: 1.1em;
+  color: white;
 }
 .timeline {
   border-top: 3px solid;
@@ -379,10 +383,14 @@ header .button:hover a {
   text-transform: uppercase;
   padding: 10px;
   font-size-adjust: auto;
+  vertical-align: baseline;
 }
 .flip-box-back {
   color: white;
   transform: rotateY(180deg);
+  /* display: flex; contexte sur le parent */
+  /* flex-direction: column; direction d'affichage verticale */
+  /* justify-content: center; */
 }
 .flip-box-front, .flip-box-back {
   position: absolute;
@@ -544,7 +552,7 @@ footer p {
   }
   .network {
     font-size: 2em;
-    padding: 10x 20px; 
+    padding: 10x 20px;
   }
 }
 @media screen and (max-width: 770px) {
