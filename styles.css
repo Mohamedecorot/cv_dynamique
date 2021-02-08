@@ -634,3 +634,19 @@ footer p {
     letter-spacing: 03em;
 }
 
+/* ******************MEDIA QUERIES****************** */
+@media screen and (max-width: 900px) {
+    .infos h5, .typed {
+        font-size: 0.9em;
+    }
+    #langages {
+        margin-left: 1%;
+    }
+    #formation {
+        margin-right: 1%;
+    }
+    .network {
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+}
