@@ -701,3 +701,29 @@ footer p {
     }
 }
 
+@media screen and (max-width: 520px) {
+    h1 {
+        padding-top: 20px;
+    }
+    h3 {
+        font-size: 1em !important;
+    }
+    #fcc, #occ {
+        padding: 50px 0 0 0;
+    }
+    .projet:nth-child(2), .projet:nth-child(3) {
+        margin-left: 0;
+    }
+    .legende {
+        opacity: 1;
+    }
+    #other-skills {
+        display: none;
+    }
+    #hobbies {
+        margin-top: -30px;
+    }
+    .flip-box-back p {
+        font-size: 0.7em;
+    }
+}
