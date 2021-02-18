@@ -1,0 +1,218 @@
+html {
+    scroll-behavior: smooth;
+}
+h2, h3, h4, .nav-item, #transition, #newsletter, footer {
+    text-align: center;
+}
+
+/* ******************* HEADER **************** */
+.collapse {
+  margin-left: 4%;
+}
+.nav-item {
+  color: rgb(174, 238, 238);
+  font-weight: bold;
+  padding-right: 45px;
+}
+header {
+    background: url('../img/main.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 5em;
+    padding: 65px 0 0 29%;
+    text-shadow: -3px 3px 2px #32b4db;
+    animation: titre ease 5s;
+}
+
+@keyframes titre {
+    0% {
+      opacity: 0;
+      transform: translateY(350px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+/* **************************** LEFT PART ************************ */
+#leftPart {
+    background-color: #32b4db;
+    border-radius: 20px;
+    padding: 25px;
+}
+  .elements {
+    padding: 20px 0;
+}
+.elements img {
+    border-radius: 50%;
+    width: 200px;
+    margin-top: 40px;
+}
+  .elements p {
+    font-size: 1.2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    padding-right: 20px;
+}
+.elements .button {
+    text-align: right;
+    margin: 15px 4% 0 0;
+}
+  /* ************************** RIGHT PART ************************* */
+#rightPart {
+    background-color: #007bff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.spec {
+    height: 200px;
+    width: 200px;
+    margin: 50px auto;
+}
+.spec h4 {
+    position: relative;
+    color: 32b4db;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 1px 1px 0 #32b4db,1px -1px 0 #32b4db,-1px 1px 0 #32b4db,-1px -1px 0 #32b4db,1px 0px 0 #32b4db,0px 1px 0 #32b4db,-1px 0px 0 #32b4db,0px -1px 0 #32b4db;
+}
+.spec:hover {
+    transform: scale(1.08);
+    opacity: 0.7;
+    transition: ease-out 0.2s;
+}
+
+#transition {
+    padding: 50px 0 0 0;
+}
+#transition img{
+    animation: om ease 12s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+@keyframes om{
+    0% {
+      transform:  translate(0px,0px)  ;
+    }
+    9% {
+      transform:  translate(79px,-22px)  ;
+    }
+    26% {
+      transform:  translate(-4px,-5px)  ;
+    }
+    33% {
+      transform:  translate(80px,18px)  ;
+    }
+    48% {
+      transform:  translate(-17px,-13px)  ;
+    }
+    56% {
+      transform:  translate(57px,-45px)  ;
+    }
+    71% {
+      transform:  translate(-11px,-12px)  ;
+    }
+    82% {
+      transform:  translate(72px,7px)  ;
+    }
+    100% {
+      transform:  translate(0px,0px)  ;
+    }
+}
+
+/* *************************** NEWSLETTER ********************** */
+#newsletter {
+    background: url("../img/newsletter.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    height: 370px;
+    width: 70%;
+    min-width: 450px;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 70px;
+}
+#newsletter h4 {
+    margin-top: 15px;
+    padding: 350px 0 20px 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 0 #32b4db,1px -1px 0 #32b4db,-1px 1px 0 #32b4db,-1px -1px 0 #32b4db,1px 0px 0 #32b4db,0px 1px 0 #32b4db,-1px 0px 0 #32b4db,0px -1px 0 #32b4db;
+}
+.input-group {
+    width: 40%;
+    min-width: 350px;
+    margin: auto;
+}
+footer {
+    background-color: #32b4db;
+    padding: 4px 0;
+    margin-top: 110px;
+}
+
+/* *********************** MEDIA QUERIES ********************** */
+@media screen and (max-width: 1400px) {
+  .input-group {
+    margin: -25px auto;
+  }
+}
+@media screen and (max-width: 990px) {
+  #rightPart {
+    display: flex;
+  }
+  #rightPart h2 {
+    display: none;
+  }
+  .spec {
+    height: 130px;
+    width: 130px;
+  }
+  .input-group {
+    margin: -25px auto;
+  }
+}
+@media screen and (max-width: 790px) {
+  h1 {
+    font-size: 3em;
+  }
+  .elements {
+    padding: 30px 0;
+  }
+  .elements img {
+    max-width: 140px;
+    margin-top: 40px;
+  }
+  #transition img {
+    width: 250px;
+  }
+  .spec {
+    height: 90px;
+    width: 90px;
+  }
+  .spec h4 {
+    font-size: 0.9em;
+  }
+  footer {
+    margin-top: 140px;
+}
+}
+@media screen and (max-width: 580px) {
+  .elements {
+    padding: 15px 0;
+    text-align: center;
+  }
+  .elements img {
+    margin-bottom: 10px;
+  }
+  nav {
+    display: none !important;
+  }
+}
+

@@ -1,26 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Baumans|Megrim&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Helvetica|Megrim&display=swap');
 
-$white: #F3F0F0;
+$black: #000;
 $blue: #84c1ff;
-$red: #ff1808;
-$orange: #fa9e1e;
+$grey: #f5f5f7;
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow:hidden;
+//   height: 100vh;
+//  overflow:hidden;
   position: relative;
-  font-family: 'Baumans', cursive;
-  color: $white;
-  background: url("./media/background.jpg") no-repeat 50% 50%;
-  background-size: cover;
+  font-family: 'Helvetica', cursive;
+  color: $black;
+  background-color: $grey;
 
-  .gradient {
-  background: #000000;
-  background: linear-gradient(168deg,#000000 10%, transparent 100%);
-  height: 100vh;
-  }
 }
 li {
   list-style: none;
@@ -28,213 +21,241 @@ li {
 a {
   text-decoration: none;
     &:visited {
-      color: $white;
+      color: $black;
     }
 }
+
 // ******************** HEADER ***********************
 .title {
-  padding: 5px 0 0 10px;
-
-  h1 {
-  font-family: 'Megrim', cursive;
-  font-size: 45px;
-  font-weight: 100;
-  text-transform: uppercase;
-  margin: 0;
-  padding-left: 10px;
-  color: $orange;
-  text-shadow: 2px 2px 0px $blue, 4px 4px 0px $red, 4px 4px 6px $orange;
-  }
-}
-.nav {
-  position: absolute;
-  top: 4px;
-  right: 10px;
-
-  li {
-    display: inline;
-    padding: 0 15px;
-    border-left: 3px solid $white;
-
-    &:hover {
-      border: 2px solid $white;
-      transition: 0.5s ease-in-out;
-    }
-    &:active {
-      border: 5px solid $white;
-    }
-    @media (max-width: 799px) {
-      display: none;
-    }
-  }
-}
-.line {
-  width: 85%;
-  height: 100px;
-  border: solid 1px $white;
-  border-radius: 45%/60px 100px 0 0;
-  border-color: $orange transparent transparent transparent;
-  position: absolute;
-  top: 80px;
-  left: 13%;
-}
-// ****************** CAROUSEL **********************
-.carousel {
-  width: 20%;
-  border-radius: 0px 0px 15px 15px;
-  margin: -20px auto 20px auto;
-  overflow: hidden;
-  box-shadow: 8px 8px 4px -3px rgba(0,0,0,0.7);
-
-  @media (max-width: 840px) {
-    display: none;
-  }
-  &__figure {
-    position: relative;
-    width: 300%;
+    padding: 5px 0 0 10px;
+    text-align: center;
+    h1 {
+    font-family: 'Megrim', cursive;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
     margin: 0;
-    padding: 0;
-    font-size: 0;
-    animation: 25s sliders infinite;
-
-    &--pic {
-      width: 33.33%;
-      height: auto;
-      float: left;
+    padding-left: 10px;
+    color: $black;
+    text-shadow: 2px 2px 0px $grey, 4px 4px 0px $blue, 4px 4px 6px $black;
+    }
+    img {
+        width: 40px;
+        height: auto;
     }
   }
-}
-@keyframes sliders {
-  0% {left: 0%;}
-  20% {left: 0%;}
-  25% {left: -100%;}
-  45% {left: -100%;}
-  50% {left: -200%;}
-  70% {right: 200%;}
-  75% {right: 100%;}
-  95% {right: 100%;}
-  100% {right: 0%;}
-}
-// ********************** PRICING *********************
-.offers {
-  padding-top: 50px;
-}
-.perspective {
-  width: 100%;
-  perspective: 800px;
-  display: flex;
-  justify-content: space-between;
+.nav {
+    position: absolute;
+    top: 4px;
+    right: 10px;
 
-  &__3d {
-    width: 140px;
-    height: 200px;
-    margin: auto;
-    box-shadow: 0 70px 63px -60px #494848;
-    transform-style: preserve-3d;
-    transition: transform 0.05s linear;
+    li {
+      display: inline;
+      padding: 0 15px;
+      border-left: 3px solid $black;
 
-    &--card {
-      background-size: cover;
-      height: 100%;
-      width: 100%;
-      border-radius: 15px;
-    
-      &:after {
-        background: inherit;
-        content: '';
-        display: block;
-        position: absolute;
-        left: -60px;
-        top: 40px;
-        width: 100%;
-        height: 85%;
-        z-index: -1;
-        filter: blur(50px);
+      &:hover {
+        border: 2px solid $black;
+        transition: 0.5s ease-in-out;
+      }
+      &:active {
+        border: 5px solid $black;
+      }
+      @media (max-width: 799px) {
+        display: none;
       }
     }
-  }
-  h2 {
-    position: absolute;
-    top: 0;
-    font-size: 1.1em;
-    font-weight: 100;
-    transform: translateZ(80px);
-    text-transform: uppercase;
-  }
-  span {
-    position: absolute;
-    bottom: 40px;
-    right: -10px;
-    font-size: 0.8em;
-    font-weight: 600;
-    transform: translateZ(35px)
-  }
 }
+.line {
+    width: 85%;
+    height: 100px;
+    border: solid 1px $black;
+    border-radius: 45%/60px 100px 0 0;
+    border-color: $black transparent transparent transparent;
+    position: absolute;
+    top: 120px;
+    left: 13%;
+
+    @media (max-width: 840px) {
+        display: none;
+    }
+}
+
+// ****************** CAROUSEL **********************
+.carousel {
+    width: 20%;
+    border-radius: 0px 0px 15px 15px;
+    margin: 10px auto 20px auto;
+    overflow: hidden;
+    box-shadow: 8px 8px 4px -3px rgba(0,0,0,0.7);
+
+    @media (max-width: 840px) {
+      display: none;
+    }
+    &__figure {
+      position: relative;
+      width: 300%;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      animation: 12s sliders infinite;
+
+        &--pic {
+            width: 33.33%;
+            height: auto;
+            float: left;
+        }
+    }
+}
+@keyframes sliders {
+    0% {left: 0%;}
+    20% {left: 0%;}
+    25% {left: -100%;}
+    45% {left: -100%;}
+    50% {left: -200%;}
+    70% {right: 200%;}
+    75% {right: 100%;}
+    95% {right: 100%;}
+    100% {right: 0%;}
+}
+
+// ********************** PRICING *********************
+.offers {
+    padding-top: 50px;
+  }
+  .perspective {
+    width: 100%;
+    perspective: 800px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1240px) {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__3d {
+      width: 400px;
+      height: 280px;
+      margin: auto;
+      box-shadow: 0 70px 63px -60px #494848;
+      transform-style: preserve-3d;
+      transition: transform 0.05s linear;
+      @media (max-width: 1240px) {
+        padding-bottom: 20px;
+        }
+
+
+
+    &--card {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+
+        &:after {
+          background: inherit;
+          content: '';
+          display: block;
+          position: absolute;
+          left: -60px;
+          top: 40px;
+          width: 100%;
+          height: 85%;
+          z-index: -1;
+          filter: blur(50px);
+        }
+      }
+    }
+    h2 {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 100;
+        transform: translateZ(35px);
+        text-transform: uppercase;
+      }
+    span {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        font-size: 0.8em;
+        font-weight: 600;
+        transform: translateZ(35px)
+    }
+    @media (max-width: 1240px) {
+        transform: translateZ(0px)
+        }
+}
+
 // ******************** BUTTON *********************
 @mixin dash ($array, $offset, $width) {
-  stroke-dasharray: $array;
-  stroke-dashoffset: $offset;
-  stroke-width: $width;
+    stroke-dasharray: $array;
+    stroke-dashoffset: $offset;
+    stroke-width: $width;
 }
 
 .button {
-  padding-top: 60px;
-  position: relative;
-  margin: 0 auto;
-  width: 320px;
+    padding-top: 80px;
+    position: relative;
+    margin: 0 auto;
+    width: 340px;
 
-  &:hover
+    &:hover
+      &__rect {
+        @include dash(860,0, 2px)
+      }
+
     &__rect {
-      @include dash(760,0, 2px)
+      fill: transparent;
+      stroke: $black;
+      border-bottom: 5px solid $grey;
+
+      transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+      @include dash(140 540, -474, 8px)
     }
 
-  &__rect {
-    fill: transparent;
-    stroke: $orange;
-    border-bottom: 5px solid $orange;
-
-    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-    @include dash(140 540, -474, 8px)
-  }
-
-  &__text {
-    position: relative;
-    text-align: center;
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: 8px;
-    color: $white;
-    top: -48px;
-  }
+    &__text {
+      position: relative;
+      text-align: center;
+      font-size: 32px;
+      line-height: 28px;
+      letter-spacing: 7px;
+      color: $black;
+      top: -61px;
+      left: -7px;
+    }
 }
+
 // ********************* FOOTER ************************
 footer {
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-  right: 10%;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
 }
 .network {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3em;
-  font-family: 'Megrim', crusive;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    font-family: 'Megrim', crusive;
 
-  a {
-    padding: 0px 25px;
-  
-    @media (max-width: 840px) {
-      padding: 0px 5px;
-    }
-  }
-  & a:hover {
-    transform: scale(2.5);
-    transition: 0.4s ease-out;
-    text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 0 0 20px $orange, 0 0 30px $orange, 0 0 40px $orange, 0 0 55px $orange, 0 0 75px $orange;
+    a {
+        padding: 0px 25px;
 
-    &:nth-child(5) {
-      transform: scale(1.1);
-      font-weight: bolder;
+        @media (max-width: 840px) {
+            padding: 0px 5px;
+        }
     }
-  }
+    & a:hover {
+      transform: scale(2.5);
+      transition: 0.4s ease-out;
+      text-shadow: 0 0 5px $black, 0 0 10px $black, 0 0 15px $black, 0 0 20px $grey, 0 0 30px $grey, 0 0 40px $grey, 0 0 55px $grey, 0 0 75px $grey;
+
+        &:nth-child(5) {
+            transform: scale(1.1);
+            font-weight: bolder;
+        }
+    }
 }

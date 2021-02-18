@@ -80,7 +80,7 @@ h2 {
   box-shadow: 0 0 4px #111;
 }
 header .button {
-  margin-top: 45px;
+  margin-top: 50px;
 }
 header .button a {
   padding: 20px 80px;
@@ -199,21 +199,26 @@ header .button:hover a {
   right: -10px;
   box-sizing: content-box !important;
 }
-.timeline:nth-child(1) {
-  border-bottom: 3px solid;
-  border-top: none;
-  width: 80%;
-}
+
 .timeline:nth-child(2) {
-  border-top: none;
+  border-top: 0px transparent;
 }
 .timeline:nth-child(odd) {
   border-right: 3px solid;
+  border-left: 0px transparent;
+  border-bottom: 0px transparent;
   padding-left: 0;
 }
 .timeline:nth-child(even) {
   border-left: 3px solid;
+  border-right: 0px transparent;
+  border-bottom: 0px transparent;
   padding-right: 0;
+}
+.timeline:nth-child(1) {
+  border-bottom: 3px solid;
+  border-top: 0px transparent;
+  width: 80%;
 }
 
 /* ************************* PORTFOLIO ************************* */
@@ -249,16 +254,17 @@ header .button:hover a {
   text-align: center;
 }
 .img-container {
-  height: 250px;
+  height: auto;
   width: 90%;
   max-width: 500px;
   overflow: hidden;
   margin: 0 auto;
   box-shadow: 1px 1px 10px #111;
 }
-.img-container img {
+.img-container, .img-container img {
   position: relative;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 .img-container:hover img {
@@ -298,8 +304,12 @@ header .button:hover a {
 .legende {
   max-width: 350px;
   padding: 50px 0 0 20px;
-  opacity: 0;
+  opacity: 1;
   transition: 5s ease-in-out;
+  position: relative;
+}
+.souslegende h4 {
+  margin-top: 50px;
 }
 .projet:hover .legende {
   opacity: 1;
@@ -307,7 +317,7 @@ header .button:hover a {
 }
 .legende a {
   padding: 16px 10px 10px 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.1em;
   float: right;
   border-radius: 3px;
@@ -388,9 +398,6 @@ header .button:hover a {
 .flip-box-back {
   color: white;
   transform: rotateY(180deg);
-  /* display: flex; contexte sur le parent */
-  /* flex-direction: column; direction d'affichage verticale */
-  /* justify-content: center; */
 }
 .flip-box-front, .flip-box-back {
   position: absolute;
@@ -540,6 +547,14 @@ footer p {
   letter-spacing: 0.3em;
 }
 /* ********************** MEDIA QUERIES *********************** */
+@media screen and (max-width: 1000px) {
+  header h2 {
+    padding: 0;
+  }
+  header .button {
+    margin-top: 66px;
+  }
+}
 @media screen and (max-width: 900px) {
   .infos h5, .typed {
     font-size: 0.9em;
@@ -556,6 +571,84 @@ footer p {
   }
 }
 @media screen and (max-width: 770px) {
+
+  #parcours, #hobbie {
+    margin-bottom: 10px;
+  }
+  #portfolio, #other-skills {
+    margin-top: 30px !important;
+    margin-top: 5px;
+    padding-bottom: 10px !important;
+  }
+  #langages h3, #formation h3, #parcours h3, #portfolio h3 {
+    text-align: center;
+    font-size: 2rem !important;
+  }
+  .cloud {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .projet {
+    display: block;
+  }
+  .cadre {
+    max-width:none;
+    width: 100%;
+  }
+  .img-container, .img-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  .legende {
+    margin-top: -30px;
+    margin-left: -30px;
+    max-width: none;
+    overflow: hidden;
+  }
+  .legende p {
+    overflow: hidden;
+  }
+  .legende h5 {
+    margin-top: 0px;
+    float: right;
+  }
+  .legende a {
+    margin: 0;
+    animation: none;
+    background: none;
+    float: none;
+  }
+  .souslegende h4 {
+    margin-top: 0;
+  }
+  #langages, #formation, #other-skills, #hobbies {
+    clip-path: none;
+  }
+  #other-skills h3 {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  #hobbies {
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #hobbies h3 {
+    margin-top: 20px;
+    overflow: hidden;
+    transform: none;
+    font-size: 2rem !important;
+    text-align: center;
+    margin-bottom: 20px !important;
+  }
+  .pictures {
+    display: block;
+    text-align: center;
+  }
+  footer h3{
+    padding-top: 50px;
+  }
   .navbar {
     display: none !important;
   }
@@ -566,12 +659,17 @@ footer p {
     font-size: 2em;
   }
   #langages {
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+    max-width: none;
   }
   #formation {
-    margin: 210px 0 0 10%;
-    width: 80%;
+    margin: 210px 0 0 0;
+    width: 100%;
+    top: -170px;
+    padding: 25px 5px;
+    max-width: none;
     float: none;
     display: block;
   }
@@ -582,13 +680,14 @@ footer p {
     font-size: .8em;
   }
   #parcours {
-    margin-top: -50px
-  }
-  .legende p {
-    display: none;
+    margin-top: -140px
   }
   #other-skills h3, #hobbies h3, footer h3 {
     font-size: 2em;
+  }
+  #other-skills span {
+    margin-left: 0 !important;
+    font-size: 1.5em;
   }
   .cloud {
     font-size: 1em;
@@ -602,6 +701,18 @@ footer p {
   }
   input, textarea {
     width: 300px;
+    margin-bottom: 1px !important;
+  }
+  .flip-box {
+    margin: 0 auto;
+    margin-bottom: 2px;
+  }
+  .flip-box:hover .flip-box-inner {
+    transform: none;
+  }
+  .arrow {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 520px) {
@@ -619,9 +730,6 @@ footer p {
   }
   .legende {
     opacity: 1;
-  }
-  #other-skills {
-    display: none;
   }
   #hobbies {
     margin-top: -30px;

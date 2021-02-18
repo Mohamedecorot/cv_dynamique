@@ -1,7 +1,6 @@
 <?php
-
 $title = "cv";
-include('template/header.php');
+//include('../template/header.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +11,10 @@ include('template/header.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guerroui Mohamed</title>
 
-    <link rel="shortcut icon" href="./media/logo.png">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.css">
-    <link rel="stylesheet" href="./assets/aos/aos.css">
+    <link rel="shortcut icon" href="../moncv/media/logo.png">
+    <link rel="stylesheet" href="../moncv/styles.css">
+    <link rel="stylesheet" href="../moncv/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../moncv/assets/aos/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
@@ -58,7 +57,7 @@ include('template/header.php');
                 data-aos-offset="0"
                 data-aos-delay="50"
                 data-aos-duration="1000"
-                data-aos-once="false">Développeur front-end et back-end</h2>
+                data-aos-once="false">Développeur front-end <br> et back-end</h2>
 
             <div class="container">
                 <div class="row presentation">
@@ -261,50 +260,57 @@ include('template/header.php');
     <section id="portfolio">
         <h3>Portfolio</h3>
         <div>
-            <div class="projet">
-                <div class="cadre">
-                    <div class="img-container">
-                        <a href="./media/portfolio/P.1/index.html" target="_blank">
-                            <img src="./media/projet-1.JPG" alt="projet-1">
-                        </a>
-                    </div>
-                </div>
-                <div class="legende">
-                    <h4><img src="./media/html.png" alt="html"> <img src="./media/css.png" alt="css"> Site vitrine pour Maison d'hôtes</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid reiciendis, vero maxime animi recusandae debitis accusantium architecto dolores necessitatibus praesentium, possimus ipsa eligendi blanditiis omnis ullam et unde at.</p>
-                    <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
-                </div>
+          <div class="projet">
+            <div class="cadre">
+              <div class="img-container">
+                <a href="./media/portfolio/P.1/index.html" target="_blank">
+                  <img src="./media/projet-1.jpg" alt="projet-1">
+                </a>
+              </div>
             </div>
+            <div class="legende">
+              <div class="souslegende">
+                <h4><img src="./media/html.png" alt="html"> <img src="./media/css.png" alt="css"> Site vitrine pour coiffeur</h4>
+                <p>Projet de site vitrine pour coiffeur réalisé en HTML et CSS uniquement</p>
+                <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
+              </div>
+            </div>
+          </div>
 
-            <div class="projet">
-                <div class="cadre">
-                    <div class="img-container">
-                        <a href="./media/portfolio/P.2/index.html" target="_blank">
-                            <img src="./media/projet-2.JPG" alt="projet-2">
-                        </a>
-                    </div>
-                </div>
-                <div class="legende">
-                    <h4><img src="./media/bootstrap.png" alt="bootstrap"> <img src="./media/html.png" alt="html"> <img src="./media/css.png" alt="css"> Site E-commerce</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid reiciendis, vero maxime animi recusandae debitis accusantium architecto dolores necessitatibus praesentium, possimus ipsa eligendi blanditiis omnis ullam et unde at.</p>
-                    <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
-                </div>
+          <div class="projet">
+            <div class="cadre">
+              <div class="img-container">
+                <a href="./media/portfolio/P.2/index.html" target="_blank">
+                  <img src="./media/projet-2.jpg" alt="projet-2">
+                </a>
+              </div>
             </div>
+            <div class="legende">
+              <div class="souslegende">
+                <h4><img src="./media/bootstrap.png" alt="bootstrap"> <img src="./media/html.png" alt="html"> <img src="./media/css.png" alt="css"> Site vitrine Marseille</h4>
+                <p>Projet de site vitrine pour pour présenter la ville de Marseille réalisé en HTML, CSS et Bootstrap</p>
+                <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
+              </div>
+            </div>
+          </div>
 
-            <div class="projet">
-                <div class="cadre">
-                    <div class="img-container">
-                        <a href="./media/portfolio/P.3/index.html" target="_blank">
-                            <img src="./media/projet-3.JPG" alt="projet-3">
-                        </a>
-                    </div>
-                </div>
-                <div class="legende">
-                    <h4><img src="./media/sass.png" alt="sass"> <img src="./media/js.png" alt="js"> <img src="./media/css.png" alt="css"> Site vitrine pour Maison d'hôtes</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid reiciendis, vero maxime animi recusandae debitis accusantium architecto dolores necessitatibus praesentium, possimus ipsa eligendi blanditiis omnis ullam et unde at.</p>
-                    <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
-                </div>
+          <div class="projet">
+            <div class="cadre">
+              <div class="img-container">
+                <a href="./media/portfolio/P.3/index.html" target="_blank">
+                  <img src="./media/projet-3.jpg" alt="projet-3">
+                </a>
+              </div>
             </div>
+            <div class="legende">
+              <div class="souslegende">
+                <h4><img src="./media/sass.png" alt="sass"> <img src="./media/js.png" alt="js"> <img src="./media/css.png" alt="css"> Site E-commerce</h4>
+                <p>Projet "E-commerce" de site vitrine pour mettre en avant les produits Apple, réalisé avec Sass et Js</p>
+                <a href="http://www.github.com" target="_blank"><h5><i class="fa fa fa-github"></i> > code source du projet</h5></a>
+              </div>
+            </div>
+          </div>
+
         </div>
     </section>
 
@@ -484,10 +490,10 @@ include('template/header.php');
         <p>Mohamed Guerroui<sup>©</sup> - 2021</p>
     </footer>
 
-    <script src="./assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="./assets/js/typed.min.js" type="text/javascript"></script>
-    <script src="./assets/aos/aos.js" type="text/javascript"></script>
-    <script src="./assets/form/form.js"></script>
-    <script src="./script.js" type="text/javascript"></script>
+    <script src="../moncv/assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../moncv/assets/js/typed.min.js" type="text/javascript"></script>
+    <script src="../moncv/assets/aos/aos.js" type="text/javascript"></script>
+    <script src="../moncv/assets/form/form.js"></script>
+    <script src="../moncv/script.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,19 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Baumans|Megrim&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Helvetica|Megrim&display=swap");
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
   position: relative;
-  font-family: "Baumans", cursive;
-  color: #F3F0F0;
-  background: url("./media/background.jpg") no-repeat 50% 50%;
-  background-size: cover;
-}
-body .gradient {
-  background: #000000;
-  background: linear-gradient(168deg, #000000 10%, transparent 100%);
-  height: 100vh;
+  font-family: "Helvetica", cursive;
+  color: #000;
+  background-color: #f5f5f7;
 }
 
 li {
@@ -24,11 +16,12 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #F3F0F0;
+  color: #000;
 }
 
 .title {
   padding: 5px 0 0 10px;
+  text-align: center;
 }
 .title h1 {
   font-family: "Megrim", cursive;
@@ -37,8 +30,12 @@ a:visited {
   text-transform: uppercase;
   margin: 0;
   padding-left: 10px;
-  color: #fa9e1e;
-  text-shadow: 2px 2px 0px #84c1ff, 4px 4px 0px #ff1808, 4px 4px 6px #fa9e1e;
+  color: #000;
+  text-shadow: 2px 2px 0px #f5f5f7, 4px 4px 0px #84c1ff, 4px 4px 6px #000;
+}
+.title img {
+  width: 40px;
+  height: auto;
 }
 
 .nav {
@@ -49,14 +46,14 @@ a:visited {
 .nav li {
   display: inline;
   padding: 0 15px;
-  border-left: 3px solid #F3F0F0;
+  border-left: 3px solid #000;
 }
 .nav li:hover {
-  border: 2px solid #F3F0F0;
+  border: 2px solid #000;
   transition: 0.5s ease-in-out;
 }
 .nav li:active {
-  border: 5px solid #F3F0F0;
+  border: 5px solid #000;
 }
 @media (max-width: 799px) {
   .nav li {
@@ -67,18 +64,23 @@ a:visited {
 .line {
   width: 85%;
   height: 100px;
-  border: solid 1px #F3F0F0;
+  border: solid 1px #000;
   border-radius: 45%/60px 100px 0 0;
-  border-color: #fa9e1e transparent transparent transparent;
+  border-color: #000 transparent transparent transparent;
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 13%;
+}
+@media (max-width: 840px) {
+  .line {
+    display: none;
+  }
 }
 
 .carousel {
   width: 20%;
   border-radius: 0px 0px 15px 15px;
-  margin: -20px auto 20px auto;
+  margin: 10px auto 20px auto;
   overflow: hidden;
   box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
 }
@@ -93,7 +95,7 @@ a:visited {
   margin: 0;
   padding: 0;
   font-size: 0;
-  animation: 25s sliders infinite;
+  animation: 12s sliders infinite;
 }
 .carousel__figure--pic {
   width: 33.33%;
@@ -140,13 +142,24 @@ a:visited {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1240px) {
+  .perspective {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
 .perspective__3d {
-  width: 140px;
-  height: 200px;
+  width: 400px;
+  height: 280px;
   margin: auto;
   box-shadow: 0 70px 63px -60px #494848;
   transform-style: preserve-3d;
   transition: transform 0.05s linear;
+}
+@media (max-width: 1240px) {
+  .perspective__3d {
+    padding-bottom: 20px;
+  }
 }
 .perspective__3d--card {
   background-size: cover;
@@ -169,35 +182,41 @@ a:visited {
 .perspective h2 {
   position: absolute;
   top: 0;
+  margin: 0;
   font-size: 1.1em;
   font-weight: 100;
-  transform: translateZ(80px);
+  transform: translateZ(35px);
   text-transform: uppercase;
 }
 .perspective span {
   position: absolute;
-  bottom: 40px;
-  right: -10px;
+  bottom: 0px;
+  right: 0px;
   font-size: 0.8em;
   font-weight: 600;
   transform: translateZ(35px);
 }
+@media (max-width: 1240px) {
+  .perspective {
+    transform: translateZ(0px);
+  }
+}
 
 .button {
-  padding-top: 60px;
+  padding-top: 80px;
   position: relative;
   margin: 0 auto;
-  width: 320px;
+  width: 340px;
 }
 .button:hover .button__rect {
-  stroke-dasharray: 760;
+  stroke-dasharray: 860;
   stroke-dashoffset: 0;
   stroke-width: 2px;
 }
 .button__rect {
   fill: transparent;
-  stroke: #fa9e1e;
-  border-bottom: 5px solid #fa9e1e;
+  stroke: #000;
+  border-bottom: 5px solid #f5f5f7;
   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
@@ -207,10 +226,11 @@ a:visited {
   position: relative;
   text-align: center;
   font-size: 32px;
-  line-height: 32px;
-  letter-spacing: 8px;
-  color: #F3F0F0;
-  top: -48px;
+  line-height: 28px;
+  letter-spacing: 7px;
+  color: #000;
+  top: -61px;
+  left: -7px;
 }
 
 footer {
@@ -237,7 +257,7 @@ footer {
 .network a:hover {
   transform: scale(2.5);
   transition: 0.4s ease-out;
-  text-shadow: 0 0 5px #F3F0F0, 0 0 10px #F3F0F0, 0 0 15px #F3F0F0, 0 0 20px #fa9e1e, 0 0 30px #fa9e1e, 0 0 40px #fa9e1e, 0 0 55px #fa9e1e, 0 0 75px #fa9e1e;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #f5f5f7, 0 0 30px #f5f5f7, 0 0 40px #f5f5f7, 0 0 55px #f5f5f7, 0 0 75px #f5f5f7;
 }
 .network a:hover:nth-child(5) {
   transform: scale(1.1);
